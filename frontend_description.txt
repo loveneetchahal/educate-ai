@@ -1,0 +1,121 @@
+Based on the flowchart you've provided for the Auduate platform, here's a list of all the pages and the content expected to be on each of them:
+
+### 1. User Login
+   - Login form with fields for username and password.
+   - Options to log in as a teacher or student.
+   - Password reset and recovery options.
+   - Links to sign up for new users.
+
+### 2. User Type Determination (After Login)
+   - A gateway page that checks the user type and redirects to the appropriate dashboard (Teacher or Student).
+
+### 3. Teacher Dashboard
+   - Overview of courses managed by the teacher.
+   - Options to create new courses or edit existing ones.
+   - Access to view student progress across various courses.
+   - Navigation to view and plan upcoming lessons.
+
+### 4. Create and Manage Courses (Sub-page of Teacher Dashboard)
+   - Forms and interfaces for creating new courses.
+   - Options to upload materials, define the syllabus, and set schedules.
+   - Course management tools to update or delete course content.
+
+### 5. View Student Progress (Sub-page of Teacher Dashboard)
+   - Visual analytics displaying student performance.
+   - Lists of student engagement, grades, and progress through course materials.
+
+### 6. View Next Lessons (Sub-page of Teacher Dashboard)
+   - Calendar or list view showing the next scheduled lessons.
+   - Quick links to navigate to lesson preparation interfaces.
+
+### 7. Student Dashboard
+   - Summary of current courses enrolled.
+   - Overview of upcoming assignments and their due dates.
+   - Progress tracking on learning materials.
+   - Announcements and notifications related to the courses.
+
+### 8. View Learning Overview (Sub-page of Student Dashboard)
+   - Detailed breakdown of student’s progress in each course.
+   - Access to lesson reviews and materials.
+
+### 9. View Upcoming Assignments (Sub-page of Student Dashboard)
+   - List of pending assignments with respective due dates.
+   - Option to submit completed assignments.
+   - Access to assignment instructions and resources.
+
+### 10. Lesson Page
+   - Content area displaying the lesson material.
+   - Interactive chat interface that generates and poses questions.
+   - Navigation controls for moving to previous or next sections within the lesson.
+
+### 11. Generate Questions (Sub-feature on Lesson Page)
+   - AI-generated questions relevant to the lesson content.
+   - Area for students to input answers and interact with the AI.
+
+### 12. End of Lesson/Quiz Trigger
+   - Prompt that appears at the end of the lesson content.
+   - Option to start the quiz or review the lesson again.
+
+### 13. Take Quiz (Follows the End of Lesson)
+   - Questions pertaining to the lesson content.
+   - Multiple-choice or open-ended questions for assessment.
+   - Timer or progress bar for the quiz duration.
+
+### 14. Lesson Completion Page
+   - Summary of the quiz results and performance.
+   - Feedback on correct and incorrect answers.
+   - Recommendations for further study or review based on performance.
+
+### 15. Return to Dashboard (Final Step)
+   - Option to go back to the main dashboard (Teacher or Student) after completing a lesson or viewing progress.
+
+These pages should be designed to be minimalistic, focusing on functionality and ease of use, aligning with the platform's philosophy. Each page should facilitate the user's journey through the platform, with clear calls to action and intuitive navigation.
+
+
+User Login:
+
+Implement an authentication system that handles user login.
+Determine if the logged-in user is a teacher or a student.
+Teacher's Journey:
+
+Redirect to a Teacher Dashboard after login.
+On the dashboard, provide options to:
+Create and manage courses.
+View student progress.
+View next lessons.
+Each course management option should lead to the respective modules for creating and updating course materials and monitoring student performance.
+Student's Journey:
+
+Redirect to a Student Dashboard after login.
+On the dashboard, provide options to:
+View upcoming assignments.
+View a learning overview.
+View next lessons.
+Allow students to navigate to a lesson, which includes:
+Reading lesson content.
+Participating in a chat during the lesson.
+Generating questions for the lesson if not at the end.
+At the end of the lesson, students should be prompted to take a quiz.
+After the quiz, direct students to a lesson completion page.
+From there, students can return to their dashboard.
+Back-end Considerations:
+
+Implement role-based access control (RBAC) to distinguish between teacher and student permissions.
+Store user data, courses, lessons, quizzes, and results in a database.
+For real-time chat, use WebSocket or a similar technology for live communication.
+Front-end Considerations:
+
+Create separate dashboards for teachers and students with user-friendly UI/UX.
+Use asynchronous requests to load and submit lesson content and quiz answers without page refreshes.
+Ensure the chat system is integrated into the lesson interface.
+Quiz and Question Generation:
+
+Include a quiz module with questions related to the lesson content.
+Implement an algorithm or set up a database of questions to generate quiz content dynamically.
+Progress Tracking:
+
+For teachers, implement a progress tracking system to monitor and visualize student learning progress.
+For students, display a summary of completed and pending lessons and assignments.
+Data Security:
+
+Ensure all data transactions are secure, particularly user authentication and quiz submissions.
